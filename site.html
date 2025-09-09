@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Este comando força todos os links a abrirem em uma nova aba -->
+    <base target="_blank">
+    <title>Seja Patrocinador - 1ª Corrida Corre UZL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            /* Novo gradiente com foco nos tons de azul da marca para um visual mais sofisticado */
+            background: linear-gradient(-45deg, #0a192f, #0d2c54, #1a4a8d, #0d2c54);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .countdown-item {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+        }
+        .stat-card, .benefit-card, .tier-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .stat-card:hover, .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+        }
+        .tier-tab {
+            transition: all 0.3s ease;
+        }
+        .tier-tab.active {
+            /* Cor laranja da logo */
+            background-color: #f27405;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .tier-content {
+            display: none;
+        }
+        .tier-content.active {
+            display: block;
+        }
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .scroll-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Hero Section -->
+    <section class="min-h-screen hero-bg text-white flex flex-col items-center justify-center p-6 text-center">
+        <div class="max-w-4xl">
+            <h1 class="text-4xl md:text-7xl font-black uppercase tracking-wider scroll-reveal">Sua marca na <span class="text-orange-400">linha de chegada</span></h1>
+            <p class="mt-4 text-lg md:text-2xl font-light max-w-2xl mx-auto scroll-reveal" style="transition-delay: 200ms;">Seja a energia que impulsiona a <strong>1ª Corrida Corre UZL</strong> e conecte-se com uma comunidade vibrante e apaixonada.</p>
+            <div class="mt-8 mb-12">
+                <span class="text-xl md:text-2xl font-bold bg-white/20 px-4 py-2 rounded-full">🗓️ 25 de Janeiro de 2026 | 📍 Umarizal/RN</span>
+            </div>
+            
+            <!-- Countdown Timer -->
+            <div id="countdown" class="grid grid-cols-4 gap-2 md:gap-4 max-w-lg mx-auto scroll-reveal" style="transition-delay: 400ms;">
+                <div class="countdown-item bg-white/10 p-4 rounded-lg">
+                    <div id="days" class="text-3xl md:text-5xl font-bold">--</div>
+                    <div class="text-sm uppercase">Dias</div>
+                </div>
+                <div class="countdown-item bg-white/10 p-4 rounded-lg">
+                    <div id="hours" class="text-3xl md:text-5xl font-bold">--</div>
+                    <div class="text-sm uppercase">Horas</div>
+                </div>
+                <div class="countdown-item bg-white/10 p-4 rounded-lg">
+                    <div id="minutes" class="text-3xl md:text-5xl font-bold">--</div>
+                    <div class="text-sm uppercase">Minutos</div>
+                </div>
+                <div class="countdown-item bg-white/10 p-4 rounded-lg">
+                    <div id="seconds" class="text-3xl md:text-5xl font-bold">--</div>
+                    <div class="text-sm uppercase">Segundos</div>
+                </div>
+            </div>
+            
+            <div class="mt-12 scroll-reveal" style="transition-delay: 600ms;">
+                <a href="https://wa.me/5584998081278" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-full text-lg uppercase transition-transform transform hover:scale-105">Quero ser patrocinador</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Event Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-black text-slate-800 uppercase scroll-reveal">Mais que uma corrida, <span class="text-orange-500">um movimento</span></h2>
+            <p class="mt-4 max-w-3xl mx-auto text-lg scroll-reveal">
+                Um evento que não é apenas sobre esporte, mas sobre unir pessoas. Reuniremos atletas, famílias e equipes de toda a região para celebrar a saúde, o lazer e a força da nossa comunidade. Uma oportunidade única para sua marca se destacar.
+            </p>
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Animated Stats -->
+                <div class="stat-card bg-gray-100 p-6 rounded-xl shadow-lg scroll-reveal">
+                    <div class="text-5xl font-bold text-orange-500">+400</div>
+                    <div class="mt-2 text-lg font-semibold">Atletas Esperados</div>
+                </div>
+                <div class="stat-card bg-gray-100 p-6 rounded-xl shadow-lg scroll-reveal" style="transition-delay: 150ms;">
+                    <div class="text-5xl font-bold text-orange-500">+10</div>
+                    <div class="mt-2 text-lg font-semibold">Cidades Vizinhas</div>
+                </div>
+                <div class="stat-card bg-gray-100 p-6 rounded-xl shadow-lg scroll-reveal" style="transition-delay: 300ms;">
+                    <div class="text-5xl font-bold text-orange-500">+5.000</div>
+                    <div class="mt-2 text-lg font-semibold">Público Total</div>
+                </div>
+                <div class="stat-card bg-gray-100 p-6 rounded-xl shadow-lg scroll-reveal" style="transition-delay: 450ms;">
+                    <div class="text-5xl font-bold text-orange-500">+15.000</div>
+                    <div class="mt-2 text-lg font-semibold">Alcance Digital</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Why Sponsor Section -->
+    <section class="py-20 bg-gray-50">
+         <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-black text-slate-800 uppercase text-center scroll-reveal">Visibilidade e <span class="text-orange-500">Conexão Real</span></h2>
+            <p class="mt-4 max-w-3xl mx-auto text-lg text-center scroll-reveal">
+                Veja como sua marca pode se beneficiar ao se associar a um evento que promove energia e bem-estar.
+            </p>
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="benefit-card bg-white p-8 rounded-xl shadow-lg text-center scroll-reveal">
+                    <div class="text-4xl mb-4">🎯</div>
+                    <h3 class="text-xl font-bold mb-2">MARCA EM MOVIMENTO</h3>
+                    <p>Sua logo em uniformes, banners, pórtico de chegada e todo material de divulgação, vista por milhares de pessoas.</p>
+                </div>
+                <div class="benefit-card bg-white p-8 rounded-xl shadow-lg text-center scroll-reveal" style="transition-delay: 150ms;">
+                    <div class="text-4xl mb-4">❤️</div>
+                    <h3 class="text-xl font-bold mb-2">ASSOCIAÇÃO POSITIVA</h3>
+                    <p>Vincule sua empresa a valores como saúde, superação, bem-estar e apoio à comunidade local.</p>
+                </div>
+                <div class="benefit-card bg-white p-8 rounded-xl shadow-lg text-center scroll-reveal" style="transition-delay: 300ms;">
+                    <div class="text-4xl mb-4">📣</div>
+                    <h3 class="text-xl font-bold mb-2">PÚBLICO ENGAJADO</h3>
+                    <p>Comunique-se diretamente com um público ativo e formador de opinião de Umarizal e de toda a região.</p>
+                </div>
+                <div class="benefit-card bg-white p-8 rounded-xl shadow-lg text-center scroll-reveal" style="transition-delay: 450ms;">
+                    <div class="text-4xl mb-4">📸</div>
+                    <h3 class="text-xl font-bold mb-2">CONTEÚDO DIGITAL</h3>
+                    <p>Sua marca será destaque em fotos e vídeos profissionais, gerando conteúdo de alto impacto para suas redes sociais.</p>
+                </div>
+            </div>
+         </div>
+    </section>
+
+    <!-- Sponsorship Tiers Section -->
+    <section id="sponsorship" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-black text-slate-800 uppercase text-center scroll-reveal">Escolha seu lugar no <span class="text-orange-500">Pódio</span></h2>
+            <p class="mt-4 max-w-3xl mx-auto text-lg text-center scroll-reveal">Temos cotas de patrocínio que se adequam a diferentes perfis de investimento e garantem benefícios exclusivos.</p>
+
+            <div class="mt-12 max-w-4xl mx-auto scroll-reveal">
+                <!-- Tier Tabs -->
+                <div class="flex flex-wrap justify-center gap-2 md:gap-4 mb-8" id="tier-tabs">
+                    <button data-tier="master" class="tier-tab active text-lg py-3 px-6 rounded-full bg-gray-200">🏆 Master</button>
+                    <button data-tier="ouro" class="tier-tab text-lg py-3 px-6 rounded-full bg-gray-200">🥇 Ouro</button>
+                    <button data-tier="prata" class="tier-tab text-lg py-3 px-6 rounded-full bg-gray-200">🥈 Prata</button>
+                    <button data-tier="bronze" class="tier-tab text-lg py-3 px-6 rounded-full bg-gray-200">🥉 Bronze</button>
+                </div>
+
+                <!-- Tier Content -->
+                <div id="tier-content-container">
+                    <div id="master" class="tier-content active tier-card bg-slate-800 text-white p-8 md:p-12 rounded-2xl shadow-2xl">
+                        <h3 class="text-3xl font-bold text-orange-400">COTA MASTER</h3>
+                        <p class="text-lg mt-2 opacity-80">Exclusividade e máxima visibilidade. Apresente o evento!</p>
+                        <ul class="mt-6 space-y-3 list-disc list-inside text-lg">
+                            <li>Naming Rights do evento: "1ª Corrida Corre UZL - Apresentado por [Sua Marca]"</li>
+                            <li>Logo em destaque MÁXIMO em todo o material</li>
+                            <li>Destaque principal no pórtico de largada/chegada</li>
+                            <li>Stand principal para ativação de marca</li>
+                            <li>Menções constantes pelo locutor do evento</li>
+                            <li>Todos os benefícios das cotas inferiores</li>
+                        </ul>
+                    </div>
+                    <div id="ouro" class="tier-content tier-card bg-slate-800 text-white p-8 md:p-12 rounded-2xl shadow-2xl">
+                        <h3 class="text-3xl font-bold text-orange-400">COTA OURO</h3>
+                        <p class="text-lg mt-2 opacity-80">Para marcas que buscam grande destaque.</p>
+                        <ul class="mt-6 space-y-3 list-disc list-inside text-lg">
+                            <li>Logo em grande destaque no pórtico e camiseta oficial</li>
+                            <li>4 Banners exclusivos no percurso</li>
+                            <li>Destaque em todas as publicações nas redes sociais</li>
+                            <li>Stand para ativação de marca</li>
+                            <li>Menção especial pelo locutor do evento</li>
+                        </ul>
+                    </div>
+                    <div id="prata" class="tier-content tier-card bg-slate-800 text-white p-8 md:p-12 rounded-2xl shadow-2xl">
+                        <h3 class="text-3xl font-bold text-orange-400">COTA PRATA</h3>
+                        <p class="text-lg mt-2 opacity-80">Excelente visibilidade e ótimo custo-benefício.</p>
+                        <ul class="mt-6 space-y-3 list-disc list-inside text-lg">
+                            <li>Logo na camiseta oficial e material de divulgação</li>
+                            <li>2 Banners no percurso</li>
+                            <li>Publicação de agradecimento nas redes sociais</li>
+                            <li>Logo em painéis de agradecimento</li>
+                        </ul>
+                    </div>
+                    <div id="bronze" class="tier-content tier-card bg-slate-800 text-white p-8 md:p-12 rounded-2xl shadow-2xl">
+                        <h3 class="text-3xl font-bold text-orange-400">COTA BRONZE</h3>
+                        <p class="text-lg mt-2 opacity-80">Associe sua marca e faça parte do evento.</p>
+                        <ul class="mt-6 space-y-3 list-disc list-inside text-lg">
+                            <li>Logo no material de divulgação digital</li>
+                            <li>Logo no painel de agradecimento dos patrocinadores</li>
+                            <li>Agradecimento geral nas redes sociais</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20 bg-slate-900 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-black uppercase scroll-reveal">Faça parte desta <span class="text-orange-400">história!</span></h2>
+            <p class="mt-4 max-w-3xl mx-auto text-lg scroll-reveal">
+                Sua participação será fundamental para o sucesso deste grande evento! Contamos com sua parceria para abrilhantar ainda mais esta corrida que ficará marcada na história de Umarizal.
+            </p>
+            <div class="mt-12 flex flex-wrap justify-center gap-6 items-center scroll-reveal">
+                 <a href="https://wa.me/5584998081278" class="bg-white/90 hover:bg-white text-slate-800 font-bold py-3 px-6 rounded-full text-lg transition-transform transform hover:scale-105">
+                    📞 (84) 99808-1278
+                </a>
+                 <a href="https://wa.me/5584996309005" class="bg-white/90 hover:bg-white text-slate-800 font-bold py-3 px-6 rounded-full text-lg transition-transform transform hover:scale-105">
+                    📞 (84) 99630-9005
+                </a>
+                 <a href="https://www.instagram.com/correuzl" class="bg-white/90 hover:bg-white text-slate-800 font-bold py-3 px-6 rounded-full text-lg transition-transform transform hover:scale-105">
+                    💻 @correuzl
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-6 border-t border-slate-700">
+        <div class="container mx-auto px-6 text-center">
+            <p class="font-bold text-lg">Venha correr com a gente e fortalecer sua marca! 🏃‍♂️✨</p>
+            <p class="text-sm opacity-70 mt-2">&copy; 2024-2026 Corre UZL. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- Countdown Timer Logic ---
+        const countdownDate = new Date("Jan 25, 2026 07:00:00").getTime();
+
+        const countdownFunction = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = days < 10 ? '0' + days : days;
+            document.getElementById("hours").innerText = hours < 10 ? '0' + hours : hours;
+            document.getElementById("minutes").innerText = minutes < 10 ? '0' + minutes : minutes;
+            document.getElementById("seconds").innerText = seconds < 10 ? '0' + seconds : seconds;
+
+            if (distance < 0) {
+                clearInterval(countdownFunction);
+                document.getElementById("countdown").innerHTML = "<div class='col-span-4 text-2xl font-bold'>EVENTO REALIZADO!</div>";
+            }
+        }, 1000);
+        
+        // --- Sponsorship Tiers Logic ---
+        const tierTabs = document.getElementById('tier-tabs');
+        const tierContents = document.getElementById('tier-content-container').children;
+
+        tierTabs.addEventListener('click', (e) => {
+            if (e.target.tagName === 'BUTTON') {
+                const targetTier = e.target.dataset.tier;
+                
+                // Update tabs
+                for (let tab of tierTabs.children) {
+                    tab.classList.remove('active');
+                }
+                e.target.classList.add('active');
+                
+                // Update content
+                for (let content of tierContents) {
+                    content.classList.remove('active');
+                    if (content.id === targetTier) {
+                        content.classList.add('active');
+                    }
+                }
+            }
+        });
+
+        // --- On-Scroll Animation Logic ---
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        const revealElements = document.querySelectorAll('.scroll-reveal');
+        revealElements.forEach(el => observer.observe(el));
+    </script>
+
+</body>
+</html>
+
